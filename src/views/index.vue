@@ -1,9 +1,8 @@
 <template>
-  <div class="background" :style="backgroundImg">
-    <div>
-      <form action="/#" method="post">
-        <input type="text" v-model="username">
-
+  <div class="background">
+    <div class="login-box">
+      <form action="/#" method="post" class="login-form">
+        <input type="text" v-model="username" />
       </form>
     </div>
   </div>
@@ -13,22 +12,30 @@
 export default {
   name: "index",
   data() {
-    return {
-      backgroundImg: {
-        backgroundImage:
-          "url(" + require("../../public/img/wallhaven-4omlol.jpg") + ")",
-        backgroundRepeat: "no-repeat",
-        height: "100%",
-        width: "100%",
-        top: "0",
-        left: "0",
-      }
-    };
+    return {};
   }
 };
 </script>
 <style scoped>
 .background {
+  background-image: url(../../public/img/wallhaven-4omlol.jpg);
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
   position: fixed;
+}
+
+.login-box {
+  border: 1px gray;
+  width: 300px;
+  height: 600px;
+  right: 60px;
+  top: 200px;
+  position: absolute;
+}
+.login-form {
+    padding: 40px, 60px;
 }
 </style>
